@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#244b38">
+<title>NICHA SPA | รีวิวความประทับใจ</title>
+<style>
+:root{--green:#244b38;--deep:#183d2b;--cream:#f7f3e8;--sage:#e4ebdf;--gold:#b99a58}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(145deg,#edf2e9,#f8f5ed);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--deep);padding:22px 14px}
+main{max-width:520px;margin:0 auto;background:var(--cream);border:1px solid #d7dfd1;border-radius:24px;padding:26px 20px;box-shadow:0 12px 35px #183d2b18}
+.brand{text-align:center}
+.leaf{font-size:28px}
+h1{margin:5px 0 2px;color:var(--green);letter-spacing:2px;font-size:28px}
+.subtitle{font-weight:650;font-size:17px}
+.tag{font-size:11px;letter-spacing:2px;color:#8a7547;margin-top:5px}
+.intro{text-align:center;line-height:1.7;margin:22px 0 14px}
+.stars{text-align:center;color:var(--gold);font-size:25px;letter-spacing:5px;margin-bottom:20px}
+h2{font-size:17px;margin:18px 0 10px}
+.choice{display:block;width:100%;text-align:left;border:1px solid #d8e0d4;background:#fff;border-radius:15px;padding:13px 14px;margin:9px 0;color:var(--deep);font:inherit;line-height:1.55;cursor:pointer}
+.choice[aria-pressed=true]{border:2px solid var(--green);background:var(--sage);padding:12px 13px}
+.choice small{display:block;color:#728071;margin-top:4px;font-size:12px}
+textarea{width:100%;min-height:112px;border:1px solid #cbd7c8;border-radius:14px;padding:13px;font:inherit;line-height:1.6;color:var(--deep);background:#fff;resize:vertical}
+.actions{display:grid;gap:10px;margin-top:12px}
+button.primary,button.secondary{border:0;border-radius:999px;padding:14px 16px;font:inherit;font-weight:700;cursor:pointer}
+.primary{background:var(--green);color:white}
+.secondary{background:#e5eadf;color:var(--deep);border:1px solid #cbd7c8!important}
+.note{font-size:12px;color:#687568;line-height:1.6;margin-top:16px;text-align:center}
+#status{min-height:22px;text-align:center;color:var(--green);font-size:13px;margin-top:8px}
+footer{text-align:center;color:#8a7547;font-size:12px;margin-top:20px}
+</style>
+</head>
+<body>
+<main>
+ <header class="brand">
+  <div class="leaf">🌿</div>
+  <h1>NICHA SPA</h1>
+  <div class="subtitle">ณิชา นวดเพื่อสุขภาพ</div>
+  <div class="tag">RELAX • REFRESH • RECHARGE</div>
+ </header>
+ <section class="intro">
+  <strong>ขอบคุณที่ให้เราได้ดูแลคุณนะคะ</strong><br>
+  หากคุณประทับใจในการบริการ<br>ช่วยแบ่งปันประสบการณ์จริงให้เราหน่อยค่ะ
+ </section>
+ <div class="stars" aria-label="ดาวตกแต่ง">★ ★ ★ ★ ★</div>
+ <h2>เลือกข้อความตัวอย่างที่ตรงกับความรู้สึกของคุณ</h2>
+ <div id="choices">
+  <button class="choice" type="button" aria-pressed="false" data-text="ได้รับบริการนวดที่ผ่อนคลาย พนักงานสุภาพและใส่ใจ บรรยากาศร้านสบายดีค่ะ">🌿 บริการผ่อนคลายและใส่ใจ<small>เลือกเมื่อประทับใจกับการบริการและบรรยากาศ</small></button>
+  <button class="choice" type="button" aria-pressed="false" data-text="ร้านสะอาด บรรยากาศดี พนักงานบริการเป็นกันเอง รู้สึกสบายและประทับใจค่ะ">✨ ร้านสะอาด บรรยากาศดี<small>เลือกเมื่อประทับใจกับความสะอาดและบรรยากาศ</small></button>
+  <button class="choice" type="button" aria-pressed="false" data-text="พนักงานนวดสุภาพ รับฟังความต้องการและดูแลดีมากค่ะ">💆‍♀️ พนักงานดูแลดี<small>เลือกเมื่อประทับใจกับการดูแลของพนักงาน</small></button>
+  <button class="choice" type="button" aria-pressed="false" data-text="เป็นประสบการณ์การพักผ่อนที่ดี รู้สึกผ่อนคลายหลังใช้บริการค่ะ">🍃 ประสบการณ์พักผ่อนที่ดี<small>เลือกเมื่อรู้สึกผ่อนคลายหลังใช้บริการ</small></button>
+  <button class="choice" type="button" aria-pressed="false" data-text="ประทับใจกับบริการโดยรวม มีโอกาสจะกลับมาใช้บริการอีกค่ะ">💚 ประทับใจโดยรวม<small>เลือกเมื่ออยากบอกความประทับใจโดยรวม</small></button>
+ </div>
+ <h2>แก้ไขข้อความให้เป็นประสบการณ์จริงของคุณ</h2>
+ <textarea id="review" placeholder="เลือกข้อความด้านบน หรือพิมพ์รีวิวด้วยคำพูดของคุณเองได้เลยค่ะ"></textarea>
+ <div class="actions">
+  <button class="primary" id="copy" type="button">คัดลอกข้อความรีวิว</button>
+  <button class="secondary" id="google" type="button">ไปเขียนรีวิวบน Google ↗</button>
+ </div>
+ <div id="status" role="status" aria-live="polite"></div>
+ <p class="note">ข้อความเป็นเพียงตัวอย่าง กรุณาแก้ไขให้ตรงกับประสบการณ์จริงของคุณ การให้คะแนนและส่งรีวิวเป็นการตัดสินใจของลูกค้าแต่ละท่าน</p>
+ <footer>ขอบคุณที่สนับสนุน NICHA SPA 🌿</footer>
+</main>
+<script>
+const review=document.getElementById('review');
+const choices=[...document.querySelectorAll('.choice')];
+choices.forEach(btn=>btn.addEventListener('click',()=>{
+ choices.forEach(x=>x.setAttribute('aria-pressed','false'));
+ btn.setAttribute('aria-pressed','true');
+ review.value=btn.dataset.text;
+ document.getElementById('status').textContent='เลือกข้อความแล้ว สามารถแก้ไขได้ตามจริงค่ะ';
+}));
+document.getElementById('copy').addEventListener('click',async()=>{
+ const value=review.value.trim();
+ const status=document.getElementById('status');
+ if(!value){status.textContent='กรุณาเลือกหรือพิมพ์ข้อความก่อนค่ะ';return;}
+ try{await navigator.clipboard.writeText(value);status.textContent='คัดลอกแล้วค่ะ กลับไปวางในหน้ารีวิว Google ได้เลย';}
+ catch(e){review.focus();review.select();status.textContent='เลือกข้อความให้แล้ว กรุณากดคัดลอกบนอุปกรณ์ของคุณ';}
+});
+document.getElementById('google').addEventListener('click',()=>{
+ window.open('https://maps.app.goo.gl/S75Gie6YMzRMrjGr5?g_st=ic','_blank','noopener');
+});
+</script>
+</body>
+</html>
